@@ -255,6 +255,9 @@ CALLBACK is an optional callback to be called after the script runs."
 		   ee-jump-from)
 
 ;;;###autoload
+(ee-define "ee-xplr" (ee-get-project-dir-or-current-dir) (ee-script-path "eee-xplr.sh") (list (ee-region-text)) ee-jump-from)
+
+;;;###autoload
 (ee-define "ee-lf" default-directory (ee-script-path "eee-lf.sh") nil ee-jump-from)
 
 ;;;###autoload
@@ -338,6 +341,6 @@ CALLBACK is an optional callback to be called after the script runs."
 (define-key ee-keymap (kbd "Y") 'ee-yazi-project)
 (define-key ee-keymap (kbd "r") 'ee-rg)
 (define-key ee-keymap (kbd "l") 'ee-line)
-
+(define-key ee-keymap (kbd "d") 'ee-xplr)
 
 (provide 'eee)
